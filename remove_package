@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mv packages packages_included
+grep --invert-match $1 packages_included > packages
+rm packages_included
+sudo apt remove $1

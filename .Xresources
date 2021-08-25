@@ -1,0 +1,45 @@
+xft*antialias: true
+
+urxvt*font: xft:Input Mono:size=12
+urxvt*scrollBar: false
+
+#*foreground: #ffffff
+#*background: #000000
+
+#*color0: #000000
+#*color8: #191a1b
+#*color1: #ff8059
+#*color9: #ffa0a0
+#*color2: #44bc44
+#*color10: #78bf78
+#*color3: #d0bc00
+#*color11: #d2b580
+#*color4: #2fafff
+#*color12: #82b0ec
+#*color5: #feacd0
+#*color13: #e0b2d6
+#*color6: #00d3d0
+#*color14: #90c4ed
+#*color7: #a8a8a8
+#*color15: #ffffff
+
+*background: #1a1a19
+*foreground: #e7e7e7
+*cursorColor: #626262
+
+*color0: #1a1a19
+*color8: #1a1a19
+*color1: #e48981
+*color9: #e48981
+*color2: #94d1b3
+*color10: #94d1b3
+*color3: #ffdbbd
+*color11: #ffdbbd
+*color4: #94b3d1
+*color12: #94b3d1
+*color5: #d7afd7
+*color13: #d7afd7
+*color6: #87d7af
+*color14: #87d7af
+*color7: #626262
+*color15: #d7d7d7

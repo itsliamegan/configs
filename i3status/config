@@ -1,0 +1,47 @@
+general {
+	colors = false
+	interval = 5
+}
+
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "disk /"
+order += "battery all"
+order += "volume master"
+order += "tztime local"
+
+wireless _first_ {
+	format_up = " wifi - %essid "
+	format_down = " wifi - disconnected "
+}
+
+ethernet _first_ {
+	format_up = " eth - connected "
+	format_down = " eth - disconnected "
+}
+
+disk "/" {
+	format = " %avail "
+}
+
+battery all {
+	format = " %status %percentage "
+	format_down = " no battery "
+	status_chr = "chr"
+	status_bat = "dis"
+	status_unk = "unk"
+	status_full = "ful"
+	low_threshold = 20
+}
+
+volume master {
+	format = " %volume "
+	format_muted = " muted "
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
+
+tztime local {
+	format = " %-I:%M %p on %A, %B %d "
+}
