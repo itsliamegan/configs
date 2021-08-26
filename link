@@ -23,6 +23,7 @@ home_paths = [
 	".tool-versions",
 	".vimrc",
 	".Xmodmap",
+    ".xinitrc",
 	".Xresources"
 ]
 

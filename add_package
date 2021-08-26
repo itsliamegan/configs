@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 echo $1 >> packages
+
 mv packages packages_unsorted
 sort packages_unsorted > packages
 rm packages_unsorted
+
+mv packages packages_duplicated
+uniq packages_duplicated > packages
+rm packages_duplicated

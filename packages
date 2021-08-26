@@ -7,6 +7,15 @@ firmware-iwlwifi
 git
 gpg
 i3
+libbz2-dev
+libreadline-dev
+libssl-dev
+libx11-dev
+libx11-xcb-dev
+libxcb-randr0-dev
+libxcb-xinerama0-dev
+libxft-dev
+libxrandr-dev
 network-manager
 network-manager-gnome
 pasystray
@@ -21,3 +30,4 @@ vim
 xcape
 xinput
 xorg
+zlib1g-dev
