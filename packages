@@ -8,6 +8,9 @@ git
 gpg
 i3
 libbz2-dev
+libdbus-1-dev
+libffi-dev
+libglib2.0-dev
 libreadline-dev
 libssl-dev
 libx11-dev
@@ -24,10 +27,13 @@ psmisc
 pulseaudio
 rxvt-unicode
 sudo
+tlp
 tree
 unzip
 vim
+xbacklight
 xcape
 xinput
 xorg
+zathura
 zlib1g-dev

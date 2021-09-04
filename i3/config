@@ -57,7 +57,7 @@ exec --no-startup-id xsetroot -solid "#475f85"
 client.focused #404148 #404148 #000000 #404148
 
 bar {
-	status_command /home/liam/sources/sysinfo/_get
+	status_command i3status
 
 	position top
 

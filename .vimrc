@@ -3,6 +3,7 @@ set nocompatible
 set tabstop=2
 set shiftwidth=2
 set noexpandtab
+autocmd BufEnter * :set noexpandtab
 
 set laststatus=2
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
@@ -30,3 +31,5 @@ highlight shVariable cterm=none
 
 highlight vimOption cterm=none ctermfg=15 ctermbg=none
 highlight vimHiAttrib cterm=none ctermfg=15 ctermbg=none
+
+highlight cStructure cterm=none ctermfg=4 ctermbg=none

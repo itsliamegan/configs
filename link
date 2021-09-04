@@ -19,7 +19,11 @@ def link_all(paths, remote_dir):
 		print(f"Linked {remote_path} to {local_path}")
 
 home_paths = [
+	"bin/",
 	".bashrc",
+	".gitconfig",
+	".gitignore",
+    ".inputrc",
 	".tool-versions",
 	".vimrc",
 	".Xmodmap",
