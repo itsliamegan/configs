@@ -23,3 +23,24 @@ urxvt*scrollBar: false
 *color14: #87d7af
 *color7: #626262
 *color15: #d7d7d7
+
+/**background: #fdfdfc
+*foreground: #000000
+*cursorColor: #cccccc
+
+*color0: #000000
+*color8: #878782
+*color1: #ff3300
+*color9: #ff3300
+*color2: #527a52
+*color10: #527a52
+*color3: #e5b594
+*color11: #e5b594
+*color4: #0043a8
+*color12: #0043a8
+*color5: #750054
+*color13: #750054
+*color6: #54549f
+*color14: #54549f
+*color7: #fdfdfc
+*color15: #dddddd*/

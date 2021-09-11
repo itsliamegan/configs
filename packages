@@ -21,12 +21,14 @@ libxft-dev
 libxrandr-dev
 network-manager
 network-manager-gnome
+pandoc
 pasystray
 pavucontrol
 psmisc
 pulseaudio
 rxvt-unicode
 sudo
+texlive
 tlp
 tree
 unzip
@@ -35,5 +37,6 @@ xbacklight
 xcape
 xinput
 xorg
+youtube-dl
 zathura
 zlib1g-dev

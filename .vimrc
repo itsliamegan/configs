@@ -14,22 +14,10 @@ set relativenumber
 filetype plugin indent on
 syntax enable
 
-highlight Constant cterm=none ctermfg=2
-highlight Type cterm=none ctermfg=3
-highlight Statement cterm=none ctermfg=4
-highlight PreProc cterm=none ctermfg=4
-highlight Identifier cterm=none ctermfg=15
-highlight Comment cterm=none ctermfg=7
+set mouse=a
 
-highlight LineNr cterm=none ctermfg=7
-highlight NonText cterm=none ctermfg=0
-highlight StatusLine cterm=none ctermfg=0 ctermbg=15
-highlight StatusLineNC cterm=none ctermfg=7 ctermbg=0
+colorscheme neon_dark
 
-highlight link shQuote String
-highlight shVariable cterm=none
-
-highlight vimOption cterm=none ctermfg=15 ctermbg=none
-highlight vimHiAttrib cterm=none ctermfg=15 ctermbg=none
-
-highlight cStructure cterm=none ctermfg=4 ctermbg=none
+function! CurrentHighlightGroups()
+  echo map(synstack(line("."), col(".")), "synIDattr(v:val, 'name')")
+endfunc

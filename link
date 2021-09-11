@@ -20,6 +20,7 @@ def link_all(paths, remote_dir):
 
 home_paths = [
 	"bin/",
+	".vim/",
 	".bashrc",
 	".gitconfig",
 	".gitignore",
