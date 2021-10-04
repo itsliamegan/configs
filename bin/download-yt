@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+#
+# download-yt - download the audio or video of a youtube video
+#
+# usage: download-yt <video_id> <file> [--video|--audio]
+#
+# video_id - the ID or URL of the video to be downloaded
+# file     - the barename of the file to create
+#
+# --video - download the video to an MP4 file (default)
+# --audio - download only the audio to an MP3 file
+
+VIDEO_FORMAT="bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"
+
+video_id=$1
+file=$2
+mode=$3
+
+if [ -z "$video_id" ]; then
+	printf "download-yt: missing video id\n"
+	exit 1
+elif [ -z "$file" ]; then
+	printf "download-yt: missing file name\n"
+	exit 1
+fi
+
+if [ -z "$mode" -o "$mode" = "--video" ]; then
+	youtube-dl $video_id --output $file.mp4 --format $VIDEO_FORMAT
+else
+	youtube-dl $video_id --output $file.mp4 --extract-audio --audio-format mp3
+fi

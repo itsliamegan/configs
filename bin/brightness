@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#
+# brightness - control the brightness of the display
+#
+# usage: brightness <up|down>
+#
+# up   - increase the display's brightness
+# down - decrease the display's brightness
+
+action=$1
+
+if [ -z "$action" ]; then
+	printf "brightness: no action given\n"
+	exit 1
+elif [ "$action" = "up" ]; then
+	xbacklight -inc 10
+elif [ "$action" = "down" ]; then
+	xbacklight -dec 10
+else
+	printf "brightness: invalid action\n"
+	exit 1
+fi

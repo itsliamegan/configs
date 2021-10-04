@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# collapse - collapse hard-wrapped paragraphs of text into paragraphs with no
+# wrapping, but preserving explicit line breaks between paragraphs.
+#
+# usage: collapse [FILE]...
+
+NEWLINE_SIGIL="@"
+
+while read line; do
+	# Convert every newline to some sigil, because unix text manipulation tools
+	# typically only work on a line-by-line basis. Empty lines are two
+	# successive newline characters, so preserve those, but collapse any lone
+	# newline characters into spaces.
+	#
+	# Breaks with any text that contains the sigil.
+	tr "\n" "$NEWLINE_SIGIL" \
+		| sed "s/$NEWLINE_SIGIL$NEWLINE_SIGIL/\n\n/g" \
+		| sed "s/$NEWLINE_SIGIL/ /g"
+done < <(cat "$@")

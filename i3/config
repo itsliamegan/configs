@@ -40,6 +40,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Return exec urxvt
 bindsym $mod+f exec firefox
 
+bindsym XF86AudioRaiseVolume exec --no-startup-id "volume up"
+bindsym XF86AudioLowerVolume exec --no-startup-id "volume down"
+bindsym XF86AudioMute exec --no-startup-id "volume toggle"
+
+bindsym XF86MonBrightnessUp exec --no-startup-id "brightness up"
+bindsym XF86MonBrightnessDown exec --no-startup-id "brightness down"
+
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xcape
 

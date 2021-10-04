@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+#
+# display-on - configure connected displays according to personal conventions
+#
+# usage: display-on <internal|external|auto>
+#
+# internal - use the internal display
+# external - use the external display
+# auto     - use an external display if it's connected, otherwise the external
+#            display
+
+INTERNAL_DISPLAY_ID="eDP1"
+INTERNAL_DISPLAY_RESOLUTION="1920x1080"
+EXTERNAL_DISPLAY_ID="DP2-1"
+EXTERNAL_DISPLAY_RESOLUTION="2560x1440"
+
+mode=$1
+
+if [ -z "$mode" ]; then
+	printf "display-on: no mode given\n"
+	exit 1
+elif [ "$mode" = "internal" ]; then
+	xrandr --output $INTERNAL_DISPLAY_ID --primary --mode $INTERNAL_DISPLAY_RESOLUTION
+elif [ "$mode" = "external" ]; then
+	xrandr --output $INTERNAL_DISPLAY_ID --off
+	xrandr --output $EXTERNAL_DISPLAY_ID --primary --mode $EXTERNAL_DISPLAY_RESOLUTION
+elif [ "$mode" = "auto" ]; then
+	if xrandr | grep -q "$EXTERNAL_DISPLAY_ID connected"; then
+		display-on external
+	else
+		display-on internal
+	fi
+else
+	printf "display-on: invalid mode\n"
+	exit 1
+fi

@@ -15,8 +15,20 @@ highlight link shQuote String
 highlight shVariable cterm=none
 
 " Vim syntax
-highlight vimOption cterm=none ctermfg=15 ctermbg=none
+highlight vimOption   cterm=none ctermfg=15 ctermbg=none
 highlight vimHiAttrib cterm=none ctermfg=15 ctermbg=none
 
 " C syntax
 highlight cStructure cterm=none ctermfg=4 ctermbg=none
+
+" JS syntax
+highlight link javaScriptIdentifier Keyword
+highlight link javaScriptFunction   Keyword
+
+" HTML syntax
+highlight link htmlTag    htmlTagName
+highlight link htmlEndTag htmlTagName
+
+" Markdown syntax
+highlight Math       cterm=none ctermfg=2 ctermbg=none
+highlight InlineMath cterm=none ctermfg=2 ctermbg=none

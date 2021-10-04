@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# copy - copy the contents of files or stdin to the X11 clipboard.
+#
+# usage: copy [FILE...]
+
+xclip -selection clipboard < <(cat "$@")

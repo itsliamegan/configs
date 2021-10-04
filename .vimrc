@@ -1,7 +1,7 @@
 set nocompatible
 
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set noexpandtab
 autocmd BufEnter * :set noexpandtab
 
@@ -18,6 +18,14 @@ set mouse=a
 
 colorscheme neon_dark
 
+function! HighlightMath()
+	" Syntax patterns for math embedded in Markdown
+	syn region Math start=/\$\$/ end=/\$\$/
+	syn match InlineMath "\$[^$].\{-}\$"
+endfunction
+
+autocmd BufRead,BufNewFile,BufEnter *.md call HighlightMath()
+
 function! CurrentHighlightGroups()
-  echo map(synstack(line("."), col(".")), "synIDattr(v:val, 'name')")
-endfunc
+	echo map(synstack(line("."), col(".")), "synIDattr(v:val, 'name')")
+endfunction

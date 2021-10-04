@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#
+# volume - control the volume of the default audio device
+#
+# usage: volume <up|down|mute>
+#
+# up     - raise the volume by 10%
+# down   - lower the volume by 10%
+# toggle - toggle whether the volume is muted
+
+action=$1
+sink=$(pactl get-default-sink)
+
+if [ -z "$action" ]; then
+	printf "volume: no action given\n"
+	exit 1
+elif [ "$action" = "up" ]; then
+	pactl set-sink-volume $sink +10%
+elif [ "$action" = "down" ]; then
+	pactl set-sink-volume $sink -10%
+elif [ "$action" = "toggle" ]; then
+	pactl set-sink-mute $sink toggle
+else
+	printf "volume: invalid action\n"
+	exit 1
+fi

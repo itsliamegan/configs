@@ -5,3 +5,11 @@
 [user]
 	name = Liam Egan
 	email = liam@liamegan.com
+[alias]
+	st = status
+	ci = commit --verbose
+	df = diff --cached
+	lg = log --oneline --graph --decorate
+	ps = push
+	pf = push --force
+	anoe = commit --amend --no-edit
