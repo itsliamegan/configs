@@ -13,3 +13,5 @@
 	ps = push
 	pf = push --force
 	anoe = commit --amend --no-edit
+[diff]
+	algorithm = histogram
