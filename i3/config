@@ -61,7 +61,7 @@ default_floating_border pixel 2
 
 exec --no-startup-id xsetroot -solid "#475f85"
 
-client.focused #324667 #324667 #000000 #324667
+client.focused #475f85 #475f85 #000000 #475f85
 
 bar {
 	status_command i3status
@@ -72,8 +72,8 @@ bar {
 		background #000000
 		statusline #d7d7d7
 
-		focused_workspace #324667 #475f85 #ffffff
-		active_workspace #324667 #475f85 #ffffff
+		focused_workspace #475f85 #475f85 #ffffff
+		active_workspace #475f85 #475f85 #ffffff
 		inactive_workspace #0a0a0a #0a0a0a #575757
 	}
 }
