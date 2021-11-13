@@ -24,11 +24,11 @@ home_paths = [
 	".bashrc",
 	".gitconfig",
 	".gitignore",
-    ".inputrc",
+	".inputrc",
 	".tool-versions",
 	".vimrc",
 	".Xmodmap",
-    ".xinitrc",
+	".xinitrc",
 	".Xresources"
 ]
 
