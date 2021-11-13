@@ -25,6 +25,7 @@ home_paths = [
 	".gitconfig",
 	".gitignore",
 	".inputrc",
+	".profile",
 	".tool-versions",
 	".vimrc",
 	".Xmodmap",
