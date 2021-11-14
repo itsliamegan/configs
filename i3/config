@@ -54,6 +54,9 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id pasystray &
 exec --no-startup-id blueman-applet &
 
+exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent &
+exec --no-startup-id redshift -c ~/.config/redshift/config &
+
 font xft:DejaVu Sans Mono 12
 
 default_border pixel 2
