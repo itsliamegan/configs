@@ -57,14 +57,14 @@ exec --no-startup-id blueman-applet &
 exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent &
 exec --no-startup-id redshift -c ~/.config/redshift/config &
 
-font xft:DejaVu Sans Mono 12
+font xft:Roboto Mono 12
 
 default_border pixel 2
 default_floating_border pixel 2
 
 exec --no-startup-id xsetroot -solid "#475f85"
 
-client.focused #475f85 #475f85 #000000 #475f85
+client.focused #383838 #383838 #000000 #383838
 
 bar {
 	status_command i3status
