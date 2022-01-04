@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # collapse - collapse hard-wrapped paragraphs of text into paragraphs with no
-# wrapping, but preserving explicit line breaks between paragraphs.
+#            wrapping, but preserving explicit line breaks between paragraphs
 #
 # usage: collapse [FILE]...
 
