@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# capture - take a screenshot
+#
+# usage: capture <name>
+
+name=$1
+
+if [ -z "$name" ]; then
+	printf "capture: no filename given\n"
+	exit 1
+fi
+
+sleep 2.5
+import $name.png
