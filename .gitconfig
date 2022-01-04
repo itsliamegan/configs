@@ -8,10 +8,14 @@
 [alias]
 	st = status
 	ci = commit --verbose
-	df = diff --cached
+	cm = commit --message
+	df = diff
+	ds = diff --staged
 	lg = log --oneline --graph --decorate
+	ll = log
 	ps = push
 	pf = push --force
+	pu = push --set-upstream
 	anoe = commit --amend --no-edit
 [diff]
 	algorithm = histogram
