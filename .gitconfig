@@ -9,6 +9,8 @@
 	st = status
 	ci = commit --verbose
 	cm = commit --message
+	ad = add
+	ap = add --patch
 	df = diff
 	ds = diff --staged
 	lg = log --oneline --graph --decorate
