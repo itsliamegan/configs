@@ -27,6 +27,11 @@ highlight link javaScriptIdentifier Keyword
 highlight link javaScriptFunction   Keyword
 highlight link javascriptBraces     Delimiter
 
+" JSON syntax
+highlight link jsonBraces  Delimiter
+highlight link jsonQuote   String
+highlight link jsonKeyword String
+
 " HTML syntax
 highlight link htmlTag    htmlTagName
 highlight link htmlEndTag htmlTagName
