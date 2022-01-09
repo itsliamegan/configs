@@ -4,6 +4,7 @@ highlight Statement  cterm=none ctermfg=4  ctermbg=none
 highlight PreProc    cterm=none ctermfg=4  ctermbg=none
 highlight Identifier cterm=none ctermfg=15 ctermbg=none
 highlight Comment    cterm=none ctermfg=8  ctermbg=none
+highlight Delimiter  cterm=none ctermfg=7  ctermbg=none
 
 highlight LineNr       cterm=none ctermfg=8 ctermbg=none
 highlight NonText      cterm=none ctermfg=0 ctermbg=none
@@ -24,6 +25,7 @@ highlight cStructure cterm=none ctermfg=4 ctermbg=none
 " JS syntax
 highlight link javaScriptIdentifier Keyword
 highlight link javaScriptFunction   Keyword
+highlight link javascriptBraces     Delimiter
 
 " HTML syntax
 highlight link htmlTag    htmlTagName
