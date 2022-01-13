@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
+from shutil import copy as copy_file, copytree as copy_dir
+
+def link_all(paths, remote_dir):
+	for path in paths:
+		local_path = Path.cwd().joinpath(path)
+		remote_path = remote_dir.joinpath(path)
+
+		if not local_path.exists():
+			print(f"{local_path} does not exist, skipping")
+			continue
+
+		if remote_path.exists():
+			print(f"{remote_path} already exists, skipping")
+			continue
+
+		remote_path.symlink_to(local_path)
+		print(f"Linked {remote_path} to {local_path}")
+
+class Link:
+	def __init__(self, local_path, remote_path):
+		self.local_path = local_path
+		self.remote_path = remote_path
+
+	def __call__(self):
+		if not self.local_path.exists():
+			print(f"{self.local_path} does not exist, skipping")
+			return
+
+		if self.remote_path.exists():
+			print(f"{self.remote_path} already exists, skipping")
+			return
+
+		self.remote_path.symlink_to(self.local_path)
+		print(f"linked {self.remote_path} to {self.local_path}")
+
+class Copy:
+	def __init__(self, local_path, remote_path):
+		self.local_path = local_path
+		self.remote_path = remote_path
+
+	def __call__(self):
+		if self.remote_path.exists():
+			print(f"{self.remote_path} already exists, skipping")
+			return
+
+		if self.local_path.is_dir():
+			copy_dir(self.local_path, self.remote_path)
+		else:
+			copy_file(self.local_path, self.remote_path)
+
+		print(f"copied {self.local_path} to {self.remote_path}")
+
+def link(name, remote_dir):
+	local_dir = Path.cwd()
+	local_path = local_dir.joinpath(name)
+	remote_path = remote_dir.joinpath(name)
+
+	return Link(local_path, remote_path)
+
+def copy(name, remote_dir):
+	local_dir = Path.cwd()
+	local_path = local_dir.joinpath(name)
+	remote_path = remote_dir.joinpath(name)
+
+	return Copy(local_path, remote_path)
+
+home_dir = Path.home()
+xdg_config_dir = home_dir.joinpath(".config")
+
+operations = [
+	link("bin/", home_dir),
+	link(".vim/", home_dir),
+	link(".bashrc", home_dir),
+	link(".gitconfig", home_dir),
+	link(".gitignore", home_dir),
+	link(".inputrc", home_dir),
+	link(".profile", home_dir),
+	link(".tool-versions", home_dir),
+	link(".vimrc", home_dir),
+	link(".Xmodmap", home_dir),
+	link(".xinitrc", home_dir),
+	link(".Xresources", home_dir),
+
+	link("fontconfig/", xdg_config_dir),
+	link("i3/", xdg_config_dir),
+	link("i3status/", xdg_config_dir),
+
+	# redshift's apparmor configuration doesn't handle symlinks
+	copy("redshift/", xdg_config_dir)
+]
+
+for operation in operations:
+	operation()
