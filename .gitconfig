@@ -18,6 +18,7 @@
 	ps = push
 	pf = push --force
 	pu = push --set-upstream
+	amd = commit --amend
 	anoe = commit --amend --no-edit
 [diff]
 	algorithm = histogram
