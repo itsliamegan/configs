@@ -1,6 +1,21 @@
 #!/usr/bin/env bash
 
-mv packages packages_included
-grep --invert-match $1 packages_included > packages
-rm packages_included
-sudo apt remove $1
+remove_line() {
+	file=$1
+	line=$2
+	included_file="$1_included"
+
+	mv "$file" "$included_file"
+	grep --invert-match "$line" "$included_file" > "$file"
+	rm "$included_file"
+}
+
+remove_apt() {
+	package=$1
+	sudo apt remove "$package"
+}
+
+package=$1
+
+remove_line "packages" "$package"
+remove_apt "$package"

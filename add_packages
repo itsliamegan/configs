@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 for package in $@; do
-	./add_package $package
+	./add_package "$package"
 done
