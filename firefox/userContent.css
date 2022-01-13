@@ -1,0 +1,5 @@
+@-moz-document domain(twitter.com) {
+	* {
+		font-family: Helvetica Neue, sans-serif !important;
+	}
+}
