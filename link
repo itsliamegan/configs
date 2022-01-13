@@ -34,6 +34,7 @@ home_paths = [
 ]
 
 xdg_paths = [
+	"fontconfig/",
 	"i3/",
 	"i3status/"
 ]
