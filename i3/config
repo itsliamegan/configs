@@ -51,6 +51,7 @@ exec --no-startup-id picom &
 
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xcape
+exec --no-startup-id xbanish
 
 exec --no-startup-id nm-applet &
 exec --no-startup-id pasystray &
