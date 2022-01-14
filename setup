@@ -3,22 +3,6 @@
 from pathlib import Path
 from shutil import copy as copy_file, copytree as copy_dir
 
-def link_all(paths, remote_dir):
-	for path in paths:
-		local_path = Path.cwd().joinpath(path)
-		remote_path = remote_dir.joinpath(path)
-
-		if not local_path.exists():
-			print(f"{local_path} does not exist, skipping")
-			continue
-
-		if remote_path.exists():
-			print(f"{remote_path} already exists, skipping")
-			continue
-
-		remote_path.symlink_to(local_path)
-		print(f"Linked {remote_path} to {local_path}")
-
 class Link:
 	def __init__(self, local_path, remote_path):
 		self.local_path = local_path
