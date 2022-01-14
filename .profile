@@ -12,6 +12,10 @@ alias tree="tree -C -F --dirsfirst -I '__pycache__|node_modules'"
 
 source $HOME/.asdf/asdf.sh
 
+if [ "$(tty)" = "/dev/tty1" ]; then
+	startx
+fi
+
 git_status_indicator() {
 	branch=$(git branch 2>/dev/null | grep "^*" | sed "s/* \(.*\)/\1/")
 	unstaged_changes=$(git diff HEAD 2>/dev/null)
