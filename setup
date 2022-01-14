@@ -84,7 +84,6 @@ operations = [
 	link(".xinitrc", home_dir),
 	link(".Xresources", home_dir),
 
-	link("fontconfig/", xdg_config_dir),
 	link("i3/", xdg_config_dir),
 	link("i3status/", xdg_config_dir),
 
