@@ -47,6 +47,8 @@ bindsym XF86AudioMute exec --no-startup-id "volume toggle"
 bindsym XF86MonBrightnessUp exec --no-startup-id "brightness up"
 bindsym XF86MonBrightnessDown exec --no-startup-id "brightness down"
 
+exec --no-startup-id picom &
+
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xcape
 
