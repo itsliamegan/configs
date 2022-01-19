@@ -7,13 +7,12 @@ call plug#begin("~/.vim/plugins")
 	Plug 'wellle/targets.vim'
 
 	Plug 'romainl/vim-cool'
-	Plug 'ervandew/supertab'
 
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 call plug#end()
 
-syntax on
+syntax off
 filetype plugin indent on
 
 set noexpandtab
