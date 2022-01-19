@@ -65,9 +65,9 @@ font xft:Roboto Mono 12
 default_border pixel 2
 default_floating_border pixel 2
 
-exec --no-startup-id feh --bg-fill ~/pictures/wallpapers/snowy_autumn.jpg
+exec --no-startup-id xsetroot -solid "#759ebd"
 
-client.focused #383838 #383838 #000000 #383838
+client.focused #252525 #252525 #000000 #252525
 
 bar {
 	status_command i3status
@@ -78,8 +78,8 @@ bar {
 		background #000000
 		statusline #d7d7d7
 
-		focused_workspace #475f85 #475f85 #ffffff
-		active_workspace #475f85 #475f85 #ffffff
-		inactive_workspace #0f0f0f #0f0f0f #575757
+		focused_workspace #252525 #252525 #d7d7d7
+		active_workspace #252525 #252525 #d7d7d7
+		inactive_workspace #000000 #000000 #575757
 	}
 }
