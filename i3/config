@@ -75,11 +75,11 @@ bar {
 	position top
 
 	colors {
-		background #000000
+		background #101010
 		statusline #d7d7d7
 
 		focused_workspace #252525 #252525 #d7d7d7
 		active_workspace #252525 #252525 #d7d7d7
-		inactive_workspace #000000 #000000 #575757
+		inactive_workspace #101010 #101010 #575757
 	}
 }
