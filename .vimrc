@@ -6,6 +6,7 @@ call plug#begin("~/.vim/plugins")
 	Plug 'tpope/vim-surround'
 	Plug 'wellle/targets.vim'
 
+	Plug 'ryvnf/readline.vim'
 	Plug 'romainl/vim-cool'
 
 	Plug 'junegunn/fzf'
