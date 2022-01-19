@@ -5,16 +5,16 @@ urxvt*font: xft:Roboto Mono:size=16
 urxvt*scrollBar: false
 
 *background:  #000000
-*foreground:  #dcdccf
+*foreground:  #e7e7e7
 *cursorColor: #383838
 
 *color0: #000000
-*color1: #990000
-*color2: #00a600
-*color3: #999900
-*color4: #0000b2
-*color5: #b200b2
-*color6: #00a6b2
+*color1: #993333
+*color2: #33a633
+*color3: #999933
+*color4: #3333b2
+*color5: #b233b2
+*color6: #33a6b2
 *color7: #bfbfbf
 
 *color8:  #666666
