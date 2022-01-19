@@ -4,24 +4,24 @@ xft*hinting: true
 urxvt*font: xft:Roboto Mono:size=16
 urxvt*scrollBar: false
 
-*foreground:   #d8d8d8
-*background:   #181818
-*cursorColor:  #383838
+*background:  #000000
+*foreground:  #dcdccf
+*cursorColor: #383838
 
-*color0:       #181818
-*color1:       #ab4642
-*color2:       #a1b56c
-*color3:       #f7ca88
-*color4:       #7cafc2
-*color5:       #ba8baf
-*color6:       #86c1b9
-*color7:       #d8d8d8
+*color0: #000000
+*color1: #990000
+*color2: #00a600
+*color3: #999900
+*color4: #0000b2
+*color5: #b200b2
+*color6: #00a6b2
+*color7: #bfbfbf
 
-*color8:       #585858
-*color9:       #dc9656
-*color10:      #a1b56c
-*color11:      #f7ca88
-*color12:      #b8b8b8
-*color13:      #e8e8e8
-*color14:      #a16946
-*color15:      #f8f8f8
+*color8:  #666666
+*color9:  #e50000
+*color10: #00d900
+*color11: #e5e500
+*color12: #0000ff
+*color13: #e500e5
+*color14: #00e5e5
+*color15: #e5e5e5
