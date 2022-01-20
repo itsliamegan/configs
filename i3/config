@@ -65,7 +65,7 @@ font xft:Roboto Mono 12
 default_border pixel 2
 default_floating_border pixel 2
 
-exec --no-startup-id feh --bg-fill ~/pictures/wallpapers/autumn_mountains.jpg
+exec --no-startup-id feh --bg-fill ~/pictures/wallpapers/snowy_autumn.jpg
 
 client.focused #2a2a2a #2a2a2a #000000 #2a2a2a
 
