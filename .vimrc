@@ -47,7 +47,7 @@ function! KeepPosition(command)
 endfunction
 autocmd BufWritePre * call KeepPosition("%s/\s\+$//e")
 
-colorscheme solarized
+colorscheme coded_dark
 
 function! HighlightMath()
 	" Syntax patterns for math embedded in Markdown
