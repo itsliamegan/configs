@@ -13,7 +13,7 @@ call plug#begin("~/.vim/plugins")
 	Plug 'junegunn/fzf.vim'
 call plug#end()
 
-syntax off
+syntax on
 filetype plugin indent on
 
 set noexpandtab
@@ -47,7 +47,7 @@ function! KeepPosition(command)
 endfunction
 autocmd BufWritePre * call KeepPosition("%s/\s\+$//e")
 
-colorscheme coded_dark
+colorscheme solarized
 
 function! HighlightMath()
 	" Syntax patterns for math embedded in Markdown
