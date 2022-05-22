@@ -47,11 +47,7 @@ link(".profile", home_dir),
 link(".tool-versions", home_dir),
 link(".vimrc", home_dir),
 link(".Xmodmap", home_dir),
-link(".xinitrc", home_dir),
 link(".Xresources", home_dir),
-
-link("i3/", xdg_config_dir),
-link("i3status/", xdg_config_dir),
 
 # redshift's apparmor permissions don't handle symlinks; copy
 # the configuration instead
