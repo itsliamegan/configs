@@ -1,7 +1,7 @@
 xft*antialias: true
 xft*hinting: true
 
-urxvt*font: xft:Roboto Mono:size=16
+urxvt*font: xft:Roboto Mono:size=14
 urxvt*scrollBar: false
 
 *background:  #141414
