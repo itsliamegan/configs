@@ -1,5 +1,25 @@
+code, pre {
+	tab-size: 4 !important;
+}
+
+@-moz-document domain(developer.mozilla.org) {
+	code, pre {
+		font-family: monospace !important;
+	}
+}
+
+@-moz-document domain(github.com) {
+	body, .markdown-body {
+		font-family: sans-serif !important;
+	}
+
+	code, pre, .blob-num, .blob-code-inner {
+		font-family: monospace !important;
+	}
+}
+
 @-moz-document domain(twitter.com) {
 	* {
-		font-family: Helvetica Neue, sans-serif !important;
+		font-family: sans-serif !important;
 	}
 }
