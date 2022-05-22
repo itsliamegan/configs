@@ -2,7 +2,7 @@ export NAME="Liam Egan"
 export EMAIL="liam@liamegan.com"
 export EDITOR="vim"
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/bin"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:/usr/bin"
 
 export PS1="[\u@\h] \w\$(git_status_indicator) > "
 export FZF_DEFAULT_OPTS="--color=16"
